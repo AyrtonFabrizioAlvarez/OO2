@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-25T22:10:10.366Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="ModSgUVqbgyeiwL05lc-" version="24.1.0" type="device">
+<mxfile host="app.diagrams.net" modified="2024-03-25T22:20:33.509Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="_CUdXEx0Zh72m-5yI0Jt" version="24.1.0" type="device">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1518" dy="624" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -168,8 +168,8 @@
             <mxPoint y="4" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lIxV38h0dfVCvBvYEMYE-56" value="Text" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="705" y="468" width="50" height="30" as="geometry" />
+        <mxCell id="lIxV38h0dfVCvBvYEMYE-56" value="Que deberia hacer en el exportar de adaptador?&lt;div&gt;crear un JSONObject?&lt;/div&gt;&lt;div&gt;En que momento deberia VoorheesExporter comunicarse con el adapter?&lt;/div&gt;&lt;div&gt;TEORIA&lt;br&gt;cliente - biblioteca&lt;br&gt;target - VoorheesExporter&lt;br&gt;Adapter - Adaptador&lt;br&gt;Adaptee - JSON.simple&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry y="550" width="440" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
