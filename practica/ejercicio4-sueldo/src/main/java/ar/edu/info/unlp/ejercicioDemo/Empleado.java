@@ -2,9 +2,26 @@ package ar.edu.info.unlp.ejercicioDemo;
 
 public abstract class Empleado {
 
-	public abstract double sueldo();
+	public double sueldo() {
+		double sueldo = 0;
+		double basico = calcularSueldoBasico();
+		double adicional = calcularAdicionales();
+		double descuento = calcularDescuento();
+		return (basico + adicional - descuento);
+	};
 	
-	public double descuento(double sueldo) {
-		return sueldo - 1;
+	
+	
+	public double calcularDescuento() {
+		return 0.0;
 	}
+	
+	public double calcularAdicionales() {
+		return 0.0;
+	}
+	
+	public double calcularSueldoBasico() {
+		return 0.0;
+	}
+	
 }
