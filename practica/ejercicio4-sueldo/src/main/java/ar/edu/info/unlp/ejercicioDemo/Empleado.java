@@ -3,25 +3,23 @@ package ar.edu.info.unlp.ejercicioDemo;
 public abstract class Empleado {
 
 	public double sueldo() {
-		double sueldo = 0;
-		double basico = calcularSueldoBasico();
-		double adicional = calcularAdicionales();
-		double descuento = calcularDescuento();
-		return (basico + adicional - descuento);
+		double sueldo = this.calcularSueldoBasico();
+		double adicional = this.calcularAdicionales();
+		double sueldoConDescuento = calcularDescuento(sueldo, adicional);
+		return sueldoConDescuento;
 	};
 	
 	
 	
-	public double calcularDescuento() {
-		return 0.0;
+	public double calcularDescuento(double basico, double adicional) {
+		double descuentoBasico = basico * 0.13;
+		basico = basico - descuentoBasico;
+		double descuentoAdicional = adicional * 0.05;
+		adicional = adicional - descuentoAdicional;
+		return basico + adicional;
 	}
 	
-	public double calcularAdicionales() {
-		return 0.0;
-	}
+	public abstract double calcularAdicionales();
 	
-	public double calcularSueldoBasico() {
-		return 0.0;
-	}
-	
+	public abstract double calcularSueldoBasico();	
 }
