@@ -18,8 +18,7 @@ public class Definitiva extends Estado{
 	}
 	
 	public String obtenerInformacion() {
-		return this.getExcursion().obtenerInformacion() + "\n"
-				+ "Contacto inscriptos : " + "\n"
+		return 	"Contacto inscriptos : " + "\n"
 				+ this.getExcursion().getEmails()
 				+ "Lugares restantes para el cupo maximo : " + (this.getExcursion().getCupoMaximo() - this.getExcursion().getInscriptos().size());
 	}

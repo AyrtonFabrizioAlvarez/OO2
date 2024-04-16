@@ -19,7 +19,6 @@ public class Provisoria extends Estado{
 	}
 	
 	public String obtenerInformacion() {
-		return this.getExcursion().obtenerInformacion() + "\n"
-				+ "lugares restantes para el cupo minimo: " + (this.getExcursion().getCupoMinimo() - this.getExcursion().getInscriptos().size());
+		return "lugares restantes para el cupo minimo: " + (this.getExcursion().getCupoMinimo() - this.getExcursion().getInscriptos().size());
 	}
 }

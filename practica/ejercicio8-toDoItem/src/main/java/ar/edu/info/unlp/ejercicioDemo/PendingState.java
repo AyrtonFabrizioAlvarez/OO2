@@ -3,24 +3,28 @@ package ar.edu.info.unlp.ejercicioDemo;
 import java.time.Duration;
 import java.time.LocalDate;
 
-public class PendingState implements State{
-
+public class PendingState extends State{
 	
-	public PendingState() {
-		
+	
+	public PendingState(ToDoItem item) {
+		super(item);
 	}
 	
-	public State start() {
-		return new InProgressState();
+	public void start() {
+		this.getItem().setStartDate(LocalDate.now());
+		this.getItem().setState(new InProgressState(this.getItem()));
+		
 	};
-	public State togglePause() {
+	public void togglePause() {
 		throw new RuntimeException("El objeto ToDoItem aun no se ha comenzado");
-	};
-	public State finish() {
-		return null;
 	};
 	
-	public Duration workedTime(LocalDate comienzo) {
-		throw new RuntimeException("El objeto ToDoItem aun no se ha comenzado");
+	public void finish() {
 	};
+	
+	@Override
+	public Duration workedTime() {
+		throw new RuntimeException("El objeto ToDoItem aun no se ha comenzado");
+	}
+	
 }

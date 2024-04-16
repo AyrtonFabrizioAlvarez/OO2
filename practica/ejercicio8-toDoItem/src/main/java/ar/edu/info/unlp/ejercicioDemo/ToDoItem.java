@@ -15,50 +15,58 @@ public class ToDoItem {
 	public ToDoItem(String name) {
 		this.name = name;
 		this.comments = new ArrayList<String>();
-		this.state = new PendingState();
+		this.state = new PendingState(this);
 	}
 	
+	
+	//GETTERS Y SETTERS (SE UTILIZAN EN LAS SUBCLASES DE STATE)
+	public LocalDate getStartDate() {
+		return this.startDate;
+	}
+	
+	public void setStartDate(LocalDate start) {
+		this.startDate = start;
+	}
+	
+	public LocalDate getFinishDate() {
+		return this.finishDate;
+	}
+	
+	public void setFinishDate(LocalDate finish) {
+		this.finishDate = finish;
+	}
+	
+	public State getState() {
+		return this.state;
+	}
+	
+	public void setState(State state) {
+		this.state = state;
+	}
+	
+	public List<String> getComments() {
+		return this.comments;
+	}
+	
+	
+	//MODIFICACIONES DE ESTADO REALIZADAS POR LAS INSTANCIAS DE STATE
 	public void start() {
-		//ACA TENDRIA PROBLEMAS
-		//DODNE INSTANCIO LA HORA DE COMIENZO? ACA? DE ESA MANERA RESETEARIA STARTDATE CADA VEZ QUE HACE .START()
-		//SI ME ENVIARA EL CONTEXTO, DENTRO DE STATE PODRIA HACER CONTEXTO.SETSTARTDATE()
-		this.state = state.start();
+		this.state.start();
 	};
 	
 	public void togglePause() {
-		this.state = state.togglePause();
+		this.state.togglePause();
 	};
 	
 	public void finish() {
-		this.state = state.finish();
+		this.state.finish();
 	};
 	
 	public Duration workedTime() {
-		return Duration.between(this.startDate, this.finishDate);
+		return this.state.workedTime();
 	};
 	
 	public void addComment(String comment) {
-		this.comments.add(comment);
+		this.state.addComment(comment);
 	}
 }
-
-
-//public void start() {
-//	state.start(this);
-//};
-//
-//public void togglePause() {
-//	state.togglePause(this);
-//};
-//
-//public void finish() {
-//	state.finish(this);
-//};
-//
-//public Duration workedTime() {
-//	return Duration.between(this.startDate, this.finishDate);
-//};
-//
-//public void addComment(String comment) {
-//	state.addComment(this, comment);
-//}

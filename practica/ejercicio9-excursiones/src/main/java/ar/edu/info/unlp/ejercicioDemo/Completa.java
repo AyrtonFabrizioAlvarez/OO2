@@ -13,6 +13,6 @@ public class Completa extends Estado{
 	}
 	
 	public String obtenerInformacion() {
-		return this.getExcursion().obtenerInformacion();
+		return "";
 	}
 }

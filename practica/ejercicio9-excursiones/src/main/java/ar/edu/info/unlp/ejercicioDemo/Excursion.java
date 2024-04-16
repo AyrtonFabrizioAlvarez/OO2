@@ -31,6 +31,7 @@ public class Excursion {
 		this.cupoMaximo = cupoMaximo;
 		this.inscriptos = new ArrayList<Usuario>();
 		this.enEspera = new ArrayList<Usuario>();
+		this.estado = new Provisoria(this);
 	}
 	
 	
@@ -101,7 +102,8 @@ public class Excursion {
 		+ "costo : " + this.getCosto()
 		+ "fecha de inicio : "  + this.getFechaInicio()
 		+ "fecha de fin : " + this.getFechaFin()
-		+ "punto de encuentro : " + this.getPuntoEncuentro();
+		+ "punto de encuentro : " + this.getPuntoEncuentro()
+		+ this.estado.obtenerInformacion();
 	}
 	
 	public boolean alcanzoCupoMinimo() {

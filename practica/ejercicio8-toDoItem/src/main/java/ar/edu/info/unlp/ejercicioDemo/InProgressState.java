@@ -3,24 +3,23 @@ package ar.edu.info.unlp.ejercicioDemo;
 import java.time.Duration;
 import java.time.LocalDate;
 
-public class InProgressState implements State{
+public class InProgressState extends State{
 
 	
-	public InProgressState() {
-		
+	public InProgressState(ToDoItem item) {
+		super(item);
 	}
 	
-	public State start() {
-		return null;
+	public void togglePause() {
+		this.getItem().setState(new PauseState(this.getItem()));
 	};
-	public State togglePause() {
-		return new PauseState();
+	public void finish() {
+		this.getItem().setState(new FinishState(this.getItem()));
+		this.getItem().setFinishDate(LocalDate.now());
 	};
-	public State finish() {
-		return new FinishState();
+
+	public void start() {
+		
 	};
-	
-	public Duration workedTime(LocalDate comienzo) {
-		return Duration.between(comienzo, LocalDate.now());
-	};
+
 }
