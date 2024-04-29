@@ -83,7 +83,11 @@ public class Proyecto {
 	}
 	
 	public void setGanancia(double ganancia) {
-		this.ganancia = ganancia;
+		this.etapa.modificarMargen(ganancia);
+	}
+
+	public Etapa getEtapa() {
+		return etapa;
 	}
 
 

@@ -26,8 +26,8 @@ public abstract class Etapa {
 	}
 	
 	public void cancelarObjetivo() {
-		if (!this.getProyecto().getObjetivo().contains("(Cancelar)")) {
-			String objetivoCancelado = this.getProyecto().getObjetivo() + " (Cancelar)";
+		if (!this.getProyecto().getObjetivo().contains("(Cancelado)")) {
+			String objetivoCancelado = this.getProyecto().getObjetivo() + " (Cancelado)";
 			this.getProyecto().setObjetivo(objetivoCancelado);
 		}
 	}
